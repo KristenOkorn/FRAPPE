@@ -118,5 +118,5 @@ cax.yaxis.set_label_position('left')
 #final plotting & saving
 imgname = 'HCHO_3d_flightpath.png'
 imgpath = os.path.join(path, imgname)
-plt.savefig(imgpath)
+plt.savefig(imgpath, bbox_inches='tight', pad_inches=0.1)
 plt.show()
