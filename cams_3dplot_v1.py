@@ -97,7 +97,10 @@ for geom, color in zip([ocean, land, coastline, borders],
         ax.add_collection3d(collection, zs=np.zeros(len(polygons)), zdir='z')
     else:
         ax.add_collection(collection)
-        
+
+#add an overall title
+ax_3d.set_title("P3B CAMS Data (all flights combined)")
+
 # Create a colorbar
 sm = plt.cm.ScalarMappable(cmap='coolwarm')
 sm.set_array(cams['HCHO'])
