@@ -93,11 +93,9 @@ for i in range(len(fileList)):
 
         # Convert the index to a DatetimeIndex and set the nanosecond values to zero
         gcas.index = pd.to_datetime(gcas.index.values.astype('datetime64[s]'),format="%Y-%m-%d %H:%M:%S",errors='coerce')
-        # Convert the dates to strings
-        gcas['date_str'] = pd.to_numeric(gcas.index.strftime("%Y%m%d%H%M%S"))
-
+        
         #create the plot
-        sc2 = plt.scatter(gcas['{}'.format(pollutants[n])], gcas['altitude'], c=gcas['date_str'])
+        sc2 = plt.scatter(gcas['{}'.format(pollutants[n])], gcas['altitude'], c=gcas.index)
 
         #formatting
         plt.xlabel('{} ({})'.format(pollutants[n],units[n]))
