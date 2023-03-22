@@ -26,7 +26,7 @@ from os.path import isfile, join
 fileList = [f for f in listdir(csvpath) if isfile(join(csvpath, f))]
 
 #iterate over each file in the main folder
-for i in range(len(fileList)-1):
+for i in range(len(fileList)):
     
     #Create full file path for reading file
     filePath = os.path.join(csvpath, fileList[i])
