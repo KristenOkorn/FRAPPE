@@ -98,7 +98,7 @@ for i in range(len(fileList)):
         gtas['date_str'] = pd.to_numeric(gtas.index.strftime("%Y%m%d%H%M%S"))
 
         #create the plot
-        sc2 = plt.scatter(gtas['{}'.format(pollutants[n])], gtas['altitude'], c=gtas['date_str'])
+        sc2 = plt.scatter(gtas['{}'.format(pollutants[n])], gtas['altitude'], c=gtas.index)
 
         #formatting
         plt.xlabel('{} ({})'.format(pollutants[n],units[n]))
